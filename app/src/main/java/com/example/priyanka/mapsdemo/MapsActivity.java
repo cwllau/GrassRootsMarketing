@@ -103,6 +103,9 @@ LocationListener{
         //Add a marker in Honolulu Hawaii and move the camera
         LatLng impacthub_hawaii = new LatLng(21.294907, -157.852051);
         mMap.addMarker(new MarkerOptions().position(impacthub_hawaii).title("Impact Hub Hawaii"));
+//        MarkerOptions markerOptions = new MarkerOptions();
+//        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+
         mMap.moveCamera(CameraUpdateFactory.newLatLng(impacthub_hawaii));
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
@@ -134,7 +137,7 @@ LocationListener{
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
         markerOptions.title("Current Location");
-        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));//Original marker
         currentLocationmMarker = mMap.addMarker(markerOptions);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomBy(10));
@@ -173,6 +176,7 @@ LocationListener{
                                 MarkerOptions markerOptions = new MarkerOptions();
                                 markerOptions.position(latLng);
                                 markerOptions.title(location);
+                                markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
                                 mMap.addMarker(markerOptions);
                                 mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
                                 mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
@@ -183,7 +187,7 @@ LocationListener{
                     }
                 }
                 break;
-            case R.id.B_hopistals:
+            case R.id.B_hopistals: //LOLOLOLOLOLOL
                 mMap.clear();
                 String hospital = "hospital";
                 String url = getUrl(latitude, longitude, hospital);
