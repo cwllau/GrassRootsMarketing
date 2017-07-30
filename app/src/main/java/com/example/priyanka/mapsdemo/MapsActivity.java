@@ -100,6 +100,11 @@ LocationListener{
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        //Add a marker in Honolulu Hawaii and move the camera
+        LatLng impacthub_hawaii = new LatLng(21.294907, -157.852051);
+        mMap.addMarker(new MarkerOptions().position(impacthub_hawaii).title("Impact Hub Hawaii"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(impacthub_hawaii));
+
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             bulidGoogleApiClient();
             mMap.setMyLocationEnabled(true);
