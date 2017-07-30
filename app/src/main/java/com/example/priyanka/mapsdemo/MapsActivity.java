@@ -102,9 +102,41 @@ LocationListener{
 
         //Add a marker in Honolulu Hawaii and move the camera
         LatLng impacthub_hawaii = new LatLng(21.294907, -157.852051);
-        mMap.addMarker(new MarkerOptions().position(impacthub_hawaii).title("Impact Hub Hawaii"));
-//        MarkerOptions markerOptions = new MarkerOptions();
-//        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+        mMap.addMarker(new MarkerOptions().position(impacthub_hawaii).title("Impact Hub Hawaii")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+
+
+        //Parking spots near impact hub
+        LatLng oahu_church = new LatLng(21.296321, -157.851863);
+        mMap.addMarker(new MarkerOptions().position(oahu_church).title("Oahu Church of Christ")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        LatLng aloha_dog = new LatLng(21.296558, -157.852327);
+        mMap.addMarker(new MarkerOptions().position(aloha_dog).title("Aloha Dog")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        LatLng parking_lot = new LatLng(21.294561, -157.852420);
+        mMap.addMarker(new MarkerOptions().position(parking_lot).title("Parking Lot")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        LatLng ward_theatre = new LatLng(21.294486, -157.853361);
+        mMap.addMarker(new MarkerOptions().position(ward_theatre).title("Ward Theatre")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        LatLng modern_detail = new LatLng(21.295691, -157.851237);
+        mMap.addMarker(new MarkerOptions().position(modern_detail).title("Modern Detail")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        LatLng phuket_thai = new LatLng(21.294540, -157.851424);
+        mMap.addMarker(new MarkerOptions().position(phuket_thai).title("Phuket Thai")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        LatLng prestige_valet = new LatLng(21.294364, -157.850797);
+        mMap.addMarker(new MarkerOptions().position(prestige_valet).title("Prestige Valet")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        LatLng uhaul = new LatLng(21.295441, -157.851130);
+        mMap.addMarker(new MarkerOptions().position(uhaul).title("U-Haul")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        LatLng tint_shop = new LatLng(21.295608, -157.852322);
+        mMap.addMarker(new MarkerOptions().position(tint_shop).title("Tint Shop Hawaii")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        LatLng bliss_day = new LatLng(21.295022, -157.850847);
+        mMap.addMarker(new MarkerOptions().position(bliss_day).title("Bliss Day Spa")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(impacthub_hawaii));
 
@@ -134,13 +166,14 @@ LocationListener{
         }
         Log.d("lat = ",""+latitude);
         LatLng latLng = new LatLng(location.getLatitude() , location.getLongitude());
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(latLng);
-        markerOptions.title("Current Location");
-        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));//Original marker
-        currentLocationmMarker = mMap.addMarker(markerOptions);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomBy(10));
+//        MarkerOptions markerOptions = new MarkerOptions();
+//        markerOptions.position(latLng);
+//        markerOptions.title("Current Location");
+//        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));//Original marker
+//        currentLocationmMarker = mMap.addMarker(markerOptions);
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 16.0f));
+//        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+//        mMap.animateCamera(CameraUpdateFactory.zoomBy(16));
 
         if(client != null)
         {

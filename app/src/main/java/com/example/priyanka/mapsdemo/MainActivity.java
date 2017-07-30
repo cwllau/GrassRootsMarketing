@@ -1,5 +1,6 @@
 package com.example.priyanka.mapsdemo;
 
+import android.content.Intent;
 import android.support.annotation.ArrayRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                         String locationList = String.valueOf(parent.getItemAtPosition(position));
                         Toast.makeText(MainActivity.this, locationList, Toast.LENGTH_SHORT).show();
+
+                        Intent page = new Intent(MainActivity.this, MapsActivity.class);
+                        startActivity(page);
                     }
                 }
         );
