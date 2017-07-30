@@ -4,24 +4,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent">
 
-    <EditText
+    <SearchView
         android:id="@+id/TF_location"
-        android:layout_width="290dp"
+        android:layout_width="270dp"
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Search Nearby Parking"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/B_search"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="45dp"
-        android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/TF_location"
         android:onClick="onClick"
-        android:text="Search" />
+        android:text="Search"
+        android:layout_alignParentTop="true" />
 
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
@@ -34,41 +33,41 @@
         tools:context="com.example.priyanka.mapsdemo.MapsActivity"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_below="@+id/B_hopistals" />
+        android:layout_below="@+id/B_favorite" />
 
     <Button
-        android:id="@+id/B_hopistals"
+        android:id="@+id/B_favorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/TF_location"
         android:onClick="onClick"
-        android:text="Hospitals" />
+        android:text="Favorites" />
 
     <Button
-        android:id="@+id/B_schools"
+        android:id="@+id/B_recent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TF_location"
-        android:layout_toEndOf="@+id/B_hopistals"
+        android:layout_toEndOf="@+id/B_favorite"
         android:onClick="onClick"
-        android:text="Schools" />
+        android:text="Recent" />
 
     <Button
-        android:id="@+id/B_restaurants"
+        android:id="@+id/B_popular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TF_location"
-        android:layout_toEndOf="@+id/B_schools"
+        android:layout_toEndOf="@+id/B_recent"
         android:onClick="onClick"
-        android:text="Restautants" />
+        android:text="Popular" />
 
     <Button
         android:id="@+id/B_to"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/B_restaurants"
-        android:layout_toEndOf="@+id/B_restaurants"
+        android:layout_alignBottom="@+id/B_popular"
+        android:layout_toEndOf="@+id/B_popular"
         android:onClick="onClick"
         android:text="To" />
 

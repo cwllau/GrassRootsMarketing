@@ -1,6 +1,7 @@
 package com.example.priyanka.mapsdemo;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -220,37 +221,44 @@ LocationListener{
                     }
                 }
                 break;
-            case R.id.B_hopistals: //LOLOLOLOLOLOL
-                mMap.clear();
+            case R.id.B_favorite: //LOLOLOLOLOLOL
+//                mMap.clear();
                 String hospital = "hospital";
                 String url = getUrl(latitude, longitude, hospital);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
+//
+//                getNearbyPlacesData.execute(dataTransfer);
 
-                getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby Hospitals", Toast.LENGTH_SHORT).show();
+                Intent main_page = new Intent(MapsActivity.this, MainActivity.class);
+                startActivity(main_page);
+                Toast.makeText(MapsActivity.this, "Showing Favorite Parking", Toast.LENGTH_SHORT).show();
                 break;
 
 
-            case R.id.B_schools:
-                mMap.clear();
+            case R.id.B_recent:
+//                mMap.clear();
                 String school = "school";
                 url = getUrl(latitude, longitude, school);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
 
-                getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby Schools", Toast.LENGTH_SHORT).show();
+//                getNearbyPlacesData.execute(dataTransfer);
+                Intent main_page1 = new Intent(MapsActivity.this, MainActivity.class);
+                startActivity(main_page1);
+                Toast.makeText(MapsActivity.this, "Showing Recent Parking", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.B_restaurants:
-                mMap.clear();
+            case R.id.B_popular:
+//                mMap.clear();
                 String resturant = "restuarant";
                 url = getUrl(latitude, longitude, resturant);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
 
-                getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby Restaurants", Toast.LENGTH_SHORT).show();
+//                getNearbyPlacesData.execute(dataTransfer);
+                Intent main_page2 = new Intent(MapsActivity.this, MainActivity.class);
+                startActivity(main_page2);
+                Toast.makeText(MapsActivity.this, "Showing Popular Parking", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.B_to:
         }
