@@ -1,8 +1,8 @@
 # Grass Roots Marketing Platform
 Have you ever wanted to be a brand ambassador? Grass Roots Marketing connects influencers and companies in a simplified way to provide premium value to both parties.
 
-[a link](https://grassrootsco.wordpress.com/)
-[a link](https://jonaheheath.wixsite.com/grassrootsmarketing)
+[GrassRoots Marketing WordPress](https://grassrootsco.wordpress.com/)
+[GrassRoots Marketing Wix](https://jonaheheath.wixsite.com/grassrootsmarketing)
 
 
 ![alt text](https://github.com/cwllau/GrassRootsMarketing/blob/master/website_pic.png)
