@@ -108,14 +108,14 @@ LocationListener{
 
 
         //Parking spots near impact hub
-        LatLng oahu_church = new LatLng(21.296321, -157.851863);
-        mMap.addMarker(new MarkerOptions().position(oahu_church).title("Oahu Church of Christ")
+        LatLng oahu_church = new LatLng(35.302658, -120.664734);
+        mMap.addMarker(new MarkerOptions().position(oahu_church).title("Influencer Tommy, 10K followers, $10 per post")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
-        LatLng aloha_dog = new LatLng(21.296558, -157.852327);
-        mMap.addMarker(new MarkerOptions().position(aloha_dog).title("Aloha Dog")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
-        LatLng parking_lot = new LatLng(21.294561, -157.852420);
-        mMap.addMarker(new MarkerOptions().position(parking_lot).title("Parking Lot")
+        LatLng aloha_dog = new LatLng(35.302036, -120.662781);
+        mMap.addMarker(new MarkerOptions().position(aloha_dog).title("Aloha Dog, 3 followers, $3 per post")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        LatLng parking_lot = new LatLng(35.301327, -120.664905);
+        mMap.addMarker(new MarkerOptions().position(parking_lot).title("Cat, 15 followers, $2 per 5 likes")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
         LatLng ward_theatre = new LatLng(21.294486, -157.853361);
         mMap.addMarker(new MarkerOptions().position(ward_theatre).title("Ward Theatre")

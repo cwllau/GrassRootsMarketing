@@ -18,9 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] locationList = {"\uD83C\uDF1F Home", "\uD83C\uDF1F Work", "\u24D0 Impact Hub",
-                "\uD83D\uDD50 Hawaii Venture Capital Association", "\uD83D\uDD50 HPR",
-                "\uD83D\uDD50 XLR8UH", "\uD83D\uDCCD AlgorithmHub", "\uD83D\uDCCD Shaka Tea"};
+        String[] locationList = {"\uD83C\uDF1F GrassRoots" +
+                " Marketing About", "\uD83C\uDF1F Find Influencers", "\u24D0 Find Businesses",
+                "\uD83D\uDD50 Be an Influencer", "\uD83D\uDD50 Be a Partner",
+                "\uD83D\uDD50 Contact US", "\uD83D\uDCCD FAQ", "\uD83D\uDCCD Social Media"};
         ListAdapter LocationAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,locationList);
         ListView LocationView = (ListView) findViewById(R.id.locations);
         LocationView.setAdapter(LocationAdapter);
