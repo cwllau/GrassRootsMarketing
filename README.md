@@ -1,5 +1,7 @@
 # Grass Roots Marketing Platform
 Have you ever wanted to be a brand ambassador? Grass Roots Marketing connects influencers and companies in a simplified way to provide premium value to both parties.
+
+
 ![alt text](https://github.com/cwllau/GrassRootsMarketing/blob/master/website_pic.png)
 
 
